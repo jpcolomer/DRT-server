@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nemo:</b>
+  <%= @riesgo.nemo %>
+</p>
+
+<p>
+  <b>Probabilidad:</b>
+  <%= @riesgo.probabilidad %>
+</p>
+
+<p>
+  <b>Impacto:</b>
+  <%= @riesgo.impacto %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @riesgo.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_riesgo_path(@riesgo) %> |
+<%= link_to 'Back', riesgos_path %>

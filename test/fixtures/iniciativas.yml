@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  contrato_id: 1
+  fecha: 2012-07-22 21:21:08
+  compromiso: 1
+
+two:
+  contrato_id: 1
+  fecha: 2012-07-22 21:21:08
+  compromiso: 1

@@ -1,0 +1,41 @@
+<%= form_for(@dotacion) do |f| %>
+  <% if @dotacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dotacion.errors.count, "error") %> prohibited this dotacion from being saved:</h2>
+
+      <ul>
+      <% @dotacion.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contrato_id %><br />
+    <%= f.number_field :contrato_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.datetime_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :empleados %><br />
+    <%= f.number_field :empleados %>
+  </div>
+  <div class="field">
+    <%= f.label :recategorizacion %><br />
+    <%= f.number_field :recategorizacion %>
+  </div>
+  <div class="field">
+    <%= f.label :gestion_dotacional %><br />
+    <%= f.number_field :gestion_dotacional %>
+  </div>
+  <div class="field">
+    <%= f.label :nuevos_ingresos_egresos %><br />
+    <%= f.number_field :nuevos_ingresos_egresos %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

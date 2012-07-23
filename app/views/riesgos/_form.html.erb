@@ -1,0 +1,33 @@
+<%= form_for(@riesgo) do |f| %>
+  <% if @riesgo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@riesgo.errors.count, "error") %> prohibited this riesgo from being saved:</h2>
+
+      <ul>
+      <% @riesgo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nemo %><br />
+    <%= f.text_field :nemo %>
+  </div>
+  <div class="field">
+    <%= f.label :probabilidad %><br />
+    <%= f.number_field :probabilidad %>
+  </div>
+  <div class="field">
+    <%= f.label :impacto %><br />
+    <%= f.number_field :impacto %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

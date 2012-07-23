@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  iniciativa_id: 1
+  fecha: 2012-07-22 21:22:27
+  valor: 1
+
+two:
+  iniciativa_id: 1
+  fecha: 2012-07-22 21:22:27
+  valor: 1

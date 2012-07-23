@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Riesgo:</b>
+  <%= @plan_contingencia.riesgo_id %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @plan_contingencia.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_plan_contingencia_path(@plan_contingencia) %> |
+<%= link_to 'Back', plan_contingencias_path %>

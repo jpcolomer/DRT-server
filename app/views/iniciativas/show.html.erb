@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contrato:</b>
+  <%= @iniciativa.contrato_id %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @iniciativa.fecha %>
+</p>
+
+<p>
+  <b>Compromiso:</b>
+  <%= @iniciativa.compromiso %>
+</p>
+
+
+<%= link_to 'Edit', edit_iniciativa_path(@iniciativa) %> |
+<%= link_to 'Back', iniciativas_path %>

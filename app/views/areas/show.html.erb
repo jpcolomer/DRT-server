@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @area.nombre %>
+</p>
+
+<p>
+  <b>Compromiso reduccion:</b>
+  <%= @area.compromiso_reduccion %>
+</p>
+
+<p>
+  <b>Compromiso iniciativas:</b>
+  <%= @area.compromiso_iniciativas %>
+</p>
+
+
+<%= link_to 'Edit', edit_area_path(@area) %> |
+<%= link_to 'Back', areas_path %>

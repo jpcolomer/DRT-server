@@ -1,0 +1,29 @@
+<%= form_for(@avance_iniciativa) do |f| %>
+  <% if @avance_iniciativa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@avance_iniciativa.errors.count, "error") %> prohibited this avance_iniciativa from being saved:</h2>
+
+      <ul>
+      <% @avance_iniciativa.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :iniciativa_id %><br />
+    <%= f.number_field :iniciativa_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.datetime_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.number_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

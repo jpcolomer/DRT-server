@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  responsable: MyString
+  avance: 1
+  fecha_inicio: 2012-07-22 19:05:30
+  fecha_termino: 2012-07-22 19:05:30
+
+two:
+  nombre: MyString
+  responsable: MyString
+  avance: 1
+  fecha_inicio: 2012-07-22 19:05:30
+  fecha_termino: 2012-07-22 19:05:30

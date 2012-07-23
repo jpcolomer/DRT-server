@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  riesgo_id: 1
+  descripcion: MyText
+
+two:
+  riesgo_id: 1
+  descripcion: MyText

@@ -1,0 +1,2 @@
+module PlanContingenciasHelper
+end

@@ -1,0 +1,2 @@
+module RiesgosHelper
+end

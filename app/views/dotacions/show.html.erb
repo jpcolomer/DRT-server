@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contrato:</b>
+  <%= @dotacion.contrato_id %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @dotacion.fecha %>
+</p>
+
+<p>
+  <b>Empleados:</b>
+  <%= @dotacion.empleados %>
+</p>
+
+<p>
+  <b>Recategorizacion:</b>
+  <%= @dotacion.recategorizacion %>
+</p>
+
+<p>
+  <b>Gestion dotacional:</b>
+  <%= @dotacion.gestion_dotacional %>
+</p>
+
+<p>
+  <b>Nuevos ingresos egresos:</b>
+  <%= @dotacion.nuevos_ingresos_egresos %>
+</p>
+
+
+<%= link_to 'Edit', edit_dotacion_path(@dotacion) %> |
+<%= link_to 'Back', dotacions_path %>

@@ -1,0 +1,27 @@
+<h1>Listing avance_iniciativas</h1>
+
+<table>
+  <tr>
+    <th>Iniciativa</th>
+    <th>Fecha</th>
+    <th>Valor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @avance_iniciativas.each do |avance_iniciativa| %>
+  <tr>
+    <td><%= avance_iniciativa.iniciativa_id %></td>
+    <td><%= avance_iniciativa.fecha %></td>
+    <td><%= avance_iniciativa.valor %></td>
+    <td><%= link_to 'Show', avance_iniciativa %></td>
+    <td><%= link_to 'Edit', edit_avance_iniciativa_path(avance_iniciativa) %></td>
+    <td><%= link_to 'Destroy', avance_iniciativa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Avance iniciativa', new_avance_iniciativa_path %>

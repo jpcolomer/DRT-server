@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Iniciativa:</b>
+  <%= @avance_iniciativa.iniciativa_id %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @avance_iniciativa.fecha %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @avance_iniciativa.valor %>
+</p>
+
+
+<%= link_to 'Edit', edit_avance_iniciativa_path(@avance_iniciativa) %> |
+<%= link_to 'Back', avance_iniciativas_path %>

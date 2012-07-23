@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  contrato_id: 1
+  fecha: 2012-07-22 21:19:49
+  empleados: 1
+  recategorizacion: 1
+  gestion_dotacional: 1
+  nuevos_ingresos_egresos: 1
+
+two:
+  contrato_id: 1
+  fecha: 2012-07-22 21:19:49
+  empleados: 1
+  recategorizacion: 1
+  gestion_dotacional: 1
+  nuevos_ingresos_egresos: 1

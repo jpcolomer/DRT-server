@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nemo: MyString
+  probabilidad: 1
+  impacto: 1
+  descripcion: MyText
+
+two:
+  nemo: MyString
+  probabilidad: 1
+  impacto: 1
+  descripcion: MyText

@@ -1,0 +1,33 @@
+<h1>Listing dotacions</h1>
+
+<table>
+  <tr>
+    <th>Contrato</th>
+    <th>Fecha</th>
+    <th>Empleados</th>
+    <th>Recategorizacion</th>
+    <th>Gestion dotacional</th>
+    <th>Nuevos ingresos egresos</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dotacions.each do |dotacion| %>
+  <tr>
+    <td><%= dotacion.contrato_id %></td>
+    <td><%= dotacion.fecha %></td>
+    <td><%= dotacion.empleados %></td>
+    <td><%= dotacion.recategorizacion %></td>
+    <td><%= dotacion.gestion_dotacional %></td>
+    <td><%= dotacion.nuevos_ingresos_egresos %></td>
+    <td><%= link_to 'Show', dotacion %></td>
+    <td><%= link_to 'Edit', edit_dotacion_path(dotacion) %></td>
+    <td><%= link_to 'Destroy', dotacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dotacion', new_dotacion_path %>
