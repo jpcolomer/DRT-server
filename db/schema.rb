@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723033455) do
+ActiveRecord::Schema.define(:version => 20120726234200) do
 
   create_table "actividads", :force => true do |t|
     t.string   "nombre"
@@ -87,6 +87,16 @@ ActiveRecord::Schema.define(:version => 20120723033455) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "relacion_sup_area_areas", :force => true do |t|
+    t.integer  "area_id"
+    t.integer  "sup_area_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "relacion_sup_area_areas", ["area_id"], :name => "index_relacion_sup_area_areas_on_area_id"
+  add_index "relacion_sup_area_areas", ["sup_area_id"], :name => "index_relacion_sup_area_areas_on_sup_area_id"
+
   create_table "riesgos", :force => true do |t|
     t.string   "nemo"
     t.integer  "probabilidad"
@@ -94,6 +104,12 @@ ActiveRecord::Schema.define(:version => 20120723033455) do
     t.text     "descripcion"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "sup_areas", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

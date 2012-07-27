@@ -1,0 +1,27 @@
+<h1>Listing sup_areas</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Compromiso reduccion</th>
+    <th>Compromiso iniciativas</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sup_areas.each do |sup_area| %>
+  <tr>
+    <td><%= sup_area.nombre %></td>
+    <td><%= sup_area.compromiso_reduccion %></td>
+    <td><%= sup_area.compromiso_iniciativas %></td>
+    <td><%= link_to 'Show', sup_area %></td>
+    <td><%= link_to 'Edit', edit_sup_area_path(sup_area) %></td>
+    <td><%= link_to 'Destroy', sup_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sup area', new_sup_area_path %>

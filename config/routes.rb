@@ -1,5 +1,7 @@
 DRTserver::Application.routes.draw do
 
+  resources :sup_areas
+
   resources :riesgos do
     resources :plan_contingencias
   end

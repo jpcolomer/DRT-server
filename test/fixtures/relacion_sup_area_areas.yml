@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  area_id: 1
+  sup_area_id: 1
+
+two:
+  area_id: 1
+  sup_area_id: 1

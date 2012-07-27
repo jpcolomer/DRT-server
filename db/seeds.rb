@@ -51,6 +51,24 @@ areas = Area.create([
 	},
 ])
 
+SupArea.delete_all
+sup_areas = SupArea.create([
+	{
+		nombre: 'DRT'	
+	}
+])
+
+sup_area = SupArea.first
+RelacionSupAreaArea.delete_all
+relacion_sup_area_areas = RelacionSupAreaArea.create(
+	Area.all.map do |area|
+		{
+			area_id: area.id,
+			sup_area_id: sup_area.id
+		}
+	end
+)
+
 Empresa.delete_all
 empresas = Empresa.create([
 	{

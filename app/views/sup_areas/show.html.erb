@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @sup_area.nombre %>
+</p>
+
+<p>
+  <b>Compromiso reduccion:</b>
+  <%= @sup_area.compromiso_reduccion %>
+</p>
+
+<p>
+  <b>Compromiso iniciativas:</b>
+  <%= @sup_area.compromiso_iniciativas %>
+</p>
+
+
+<%= link_to 'Edit', edit_sup_area_path(@sup_area) %> |
+<%= link_to 'Back', sup_areas_path %>
