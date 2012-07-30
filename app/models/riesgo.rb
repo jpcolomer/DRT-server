@@ -4,7 +4,7 @@ class Riesgo < ActiveRecord::Base
   has_many :plan_contingencias
 
   def partition
-  	'testuser'
+  	'testuse'
   end
 
   def self.rhoconnect_query(partition)
