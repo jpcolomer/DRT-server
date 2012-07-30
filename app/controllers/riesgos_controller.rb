@@ -1,4 +1,5 @@
 class RiesgosController < ApplicationController
+  before_filter :authenticate_user!
   # GET /riesgos
   # GET /riesgos.json
   def index

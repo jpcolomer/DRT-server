@@ -1,4 +1,5 @@
 class ContratosController < ApplicationController
+  before_filter :authenticate_user!
   # GET /contratos
   # GET /contratos.json
   before_filter :get_area_or_empresa

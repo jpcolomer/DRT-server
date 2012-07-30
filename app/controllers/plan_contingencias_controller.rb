@@ -1,4 +1,5 @@
 class PlanContingenciasController < ApplicationController
+  before_filter :authenticate_user!
   # GET /plan_contingencias
   # GET /plan_contingencias.json
   def index

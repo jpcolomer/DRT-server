@@ -9,6 +9,7 @@ group :development do
 	gem 'sqlite3'
 end
 
+gem 'devise'
 gem 'pg'
 gem 'thin'
 gem 'rhoconnect-rb'

@@ -1,4 +1,5 @@
 class IniciativasController < ApplicationController
+  before_filter :authenticate_user!
   # GET /iniciativas
   # GET /iniciativas.json
   def index

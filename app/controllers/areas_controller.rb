@@ -1,4 +1,5 @@
 class AreasController < ApplicationController
+  before_filter :authenticate_user!
   # GET /areas
   # GET /areas.json
   def index

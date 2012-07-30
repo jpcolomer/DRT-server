@@ -1,4 +1,5 @@
 class SupAreasController < ApplicationController
+  before_filter :authenticate_user!
   # GET /sup_areas
   # GET /sup_areas.json
   def index

@@ -1,4 +1,5 @@
 class DotacionsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /dotacions
   # GET /dotacions.json
   def index

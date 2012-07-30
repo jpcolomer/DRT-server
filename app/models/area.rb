@@ -5,6 +5,7 @@ class Area < ActiveRecord::Base
   has_many :dotacions, :through => :contratos
   has_many :iniciativas
   has_many :avance_iniciativa, :through => :iniciativas
+  has_many :relacion_sup_area_areas
 
   def partition
   	'testuser'
