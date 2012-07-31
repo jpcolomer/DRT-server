@@ -1,6 +1,7 @@
 class AvanceIniciativa < ActiveRecord::Base
 	include Rhoconnect::Resource
   attr_accessible :fecha, :iniciativa_id, :valor
+  belongs_to :iniciativa
 
   def partition
   	'testuser'

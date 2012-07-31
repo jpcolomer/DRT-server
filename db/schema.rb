@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730162420) do
+ActiveRecord::Schema.define(:version => 20120731215159) do
 
   create_table "actividads", :force => true do |t|
     t.string   "nombre"
@@ -97,6 +97,18 @@ ActiveRecord::Schema.define(:version => 20120730162420) do
   add_index "relacion_sup_area_areas", ["area_id"], :name => "index_relacion_sup_area_areas_on_area_id"
   add_index "relacion_sup_area_areas", ["sup_area_id"], :name => "index_relacion_sup_area_areas_on_sup_area_id"
 
+  create_table "reportes", :force => true do |t|
+    t.string   "file_name"
+    t.boolean  "tipo"
+    t.datetime "fecha"
+    t.datetime "fecha_actualizacion"
+    t.string   "url"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  add_index "reportes", ["file_name"], :name => "index_reportes_on_file_name"
+
   create_table "riesgos", :force => true do |t|
     t.string   "nemo"
     t.integer  "probabilidad"
@@ -125,6 +137,7 @@ ActiveRecord::Schema.define(:version => 20120730162420) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "authentication_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
