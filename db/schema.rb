@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731215159) do
+ActiveRecord::Schema.define(:version => 20120731230016) do
 
   create_table "actividads", :force => true do |t|
     t.string   "nombre"
@@ -117,6 +117,15 @@ ActiveRecord::Schema.define(:version => 20120731215159) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
+
+  create_table "sessions", :force => true do |t|
+    t.string   "token"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "sessions", ["user_id"], :name => "index_sessions_on_user_id"
 
   create_table "sup_areas", :force => true do |t|
     t.string   "nombre"

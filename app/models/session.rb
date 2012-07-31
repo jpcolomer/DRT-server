@@ -5,11 +5,12 @@ class Session < ActiveRecord::Base
   belongs_to :user
 
   def partition
-  	self.user.id
+  	lambda { self.user.id }
   end
 
   def self.rhoconnect_query(partition)
-  	Session.includes(:user).where("users.id = ?",partition)
+  	logger.info(partition.inspect)
+  	Session.includes(:user).where("users.id = ?",partition.to_i)
   end
 
 end
