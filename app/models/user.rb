@@ -20,11 +20,11 @@ class User < ActiveRecord::Base
   end
 
   def partition
-    lambda{ self.id }
+    lambda{ self.user.id }
   end
 
   def self.rhoconnect_query(partition)
-    User.find(partition)
+    User.all
   end
 
 end
