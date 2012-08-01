@@ -1,5 +1,6 @@
 class Reporte < ActiveRecord::Base
-  attr_accessible :fecha, :file_name, :tipo, :url
+	include Rhoconnect::Resource
+  attr_accessible :fecha, :file_name, :tipo, :url, :fecha, :fecha_actualizacion
 
   def get_tipo
   	if tipo
@@ -8,4 +9,12 @@ class Reporte < ActiveRecord::Base
   		return 'semanal'
   	end
   end
+
+	def partition
+		'testuser'
+	end
+
+	def self.rhoconnect_query(partition)
+		Reporte.all
+	end
 end

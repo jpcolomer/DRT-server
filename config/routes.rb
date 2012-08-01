@@ -30,6 +30,14 @@ DRTserver::Application.routes.draw do
 
   resources :actividads
 
+
+  resources :reportes do
+    member do
+      get 'download_pdf'
+    end
+  end
+  # match 'reportes/:id/donwload_pdf' => 'reporte#download_pdf'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

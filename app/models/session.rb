@@ -9,7 +9,6 @@ class Session < ActiveRecord::Base
   end
 
   def self.rhoconnect_query(partition)
-  	logger.info("lalalala #{partition.inspect}")
   	Session.includes(:user).where("users.email = ?",partition)
   end
 

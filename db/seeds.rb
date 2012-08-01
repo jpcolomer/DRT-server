@@ -188,3 +188,12 @@ Riesgo.all.each do |riesgo|
 		end
 	)
 end
+
+Reporte.delete_all
+Reporte.create([{
+	file_name: 'reporte_mensual_01-07-2012',
+	tipo: false,
+	fecha: DateTime.strptime("01/07/2012", '%d/%m/%Y'),
+	fecha_actualizacion: DateTime.strptime("01/07/2012", '%d/%m/%Y'),
+	url: 'http://protected-ocean-7054.herokuapp.com/reportes/1/download_pdf'
+	}])
