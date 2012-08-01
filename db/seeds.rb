@@ -190,10 +190,46 @@ Riesgo.all.each do |riesgo|
 end
 
 Reporte.delete_all
-Reporte.create([{
-	file_name: 'reporte_mensual_01-07-2012',
-	tipo: false,
-	fecha: DateTime.strptime("01/07/2012", '%d/%m/%Y'),
-	fecha_actualizacion: DateTime.strptime("01/07/2012", '%d/%m/%Y'),
-	url: 'http://protected-ocean-7054.herokuapp.com/reportes/1/download_pdf'
-	}])
+Reporte.create([
+	{
+		file_name: 'reporte_mensual_01-06-2012',
+		tipo: false,
+		fecha: DateTime.strptime("01/06/2012", '%d/%m/%Y'),
+		fecha_actualizacion: DateTime.strptime("01/06/2012", '%d/%m/%Y'),
+		url: 'http://protected-ocean-7054.herokuapp.com/reportes/1/download_pdf'
+	},
+	{
+		file_name: 'reporte_mensual_01-07-2012',
+		tipo: false,
+		fecha: DateTime.strptime("01/07/2012", '%d/%m/%Y'),
+		fecha_actualizacion: DateTime.strptime("01/07/2012", '%d/%m/%Y'),
+		url: 'http://protected-ocean-7054.herokuapp.com/reportes/2/download_pdf'
+	}
+])
+
+User.delete_all
+User.create([
+	{
+		email: 'testuser',
+		password: '1234',
+		password_confirmation: '1234'
+	}, 
+	{
+		email: 'juanpablo@axxonmining.com',
+		password: 'DRT123',
+		password_confirmation: 'DRT123'
+	}
+])
+User.all.each {|user| user.ensure_authentication_token!}
+
+Session.delete_all
+Session.create([
+	{
+		user_id: User.first.id,
+		token: User.first.authentication_token
+	},
+	{
+		user_id: User.last.id,
+		token: User.last.authentication_token
+	}
+])
