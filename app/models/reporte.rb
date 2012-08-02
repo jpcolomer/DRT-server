@@ -3,7 +3,7 @@ class Reporte < ActiveRecord::Base
   attr_accessible :fecha, :file_name, :tipo, :url, :fecha, :fecha_actualizacion
 
   def get_tipo
-  	if tipo
+  	unless tipo
   		return 'mensual'
   	else
   		return 'semanal'
