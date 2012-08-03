@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731230016) do
+ActiveRecord::Schema.define(:version => 20120803194100) do
 
   create_table "actividads", :force => true do |t|
     t.string   "nombre"
@@ -57,8 +57,12 @@ ActiveRecord::Schema.define(:version => 20120731230016) do
     t.integer  "recategorizacion"
     t.integer  "gestion_dotacional"
     t.integer  "nuevos_ingresos_egresos"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
+    t.integer  "recategorizacion_fte",        :default => 0, :null => false
+    t.integer  "gestion_dotacional_fte",      :default => 0, :null => false
+    t.integer  "nuevos_ingresos_egresos_fte", :default => 0, :null => false
+    t.integer  "fte"
   end
 
   add_index "dotacions", ["contrato_id"], :name => "index_dotacions_on_contrato_id"

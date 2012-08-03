@@ -108,25 +108,32 @@ Dotacion.create([
 			empleados: rand(100..200),
 			recategorizacion: 0,
 			gestion_dotacional: 0,
-			nuevos_ingresos_egresos: 0
+			nuevos_ingresos_egresos: 0,
+			fte: rand(100..200),
+			recategorizacion_fte: 0,
+			gestion_dotacional_fte: 0,
+			nuevos_ingresos_egresos_fte: 0
 		}
 	end
 ])
 dotaciones = Dotacion.all
-dotaciones2 = (0...dotaciones.count).map do |x| 
-	dotacion = dotaciones[x]
+dotaciones2 = dotaciones.map do |dotacion|
 	{
 		contrato_id: dotacion.contrato_id,
 		fecha: DateTime.strptime("01/#{rand(2..DateTime.now.month)}/2012",'%d/%m/%Y'),
 		recategorizacion: -rand(0..5),
 		gestion_dotacional: -rand(0..5),
-		nuevos_ingresos_egresos: -rand(0..5)
+		nuevos_ingresos_egresos: -rand(0..5),
+		recategorizacion_fte: -rand(0..5),
+		gestion_dotacional_fte: -rand(0..5),
+		nuevos_ingresos_egresos_fte: -rand(0..5)
 	}
 end
 
 dotaciones2 = dotaciones2.map do |dotacion|
-	empleados = Dotacion.find_by_contrato_id(dotacion[:contrato_id]).empleados + dotacion[:recategorizacion] + dotacion[:gestion_dotacional] + dotacion[:nuevos_ingresos_egresos]
-	dotacion.merge({empleados: empleados})
+	empleados = dotaciones.select{|x| x.contrato_id == dotacion[:contrato_id] }.first.empleados + dotacion[:recategorizacion] + dotacion[:gestion_dotacional] + dotacion[:nuevos_ingresos_egresos]
+	fte = dotaciones.select{|x| x.contrato_id == dotacion[:contrato_id] }.first.fte + dotacion[:recategorizacion_fte] + dotacion[:gestion_dotacional_fte] + dotacion[:nuevos_ingresos_egresos_fte]
+	dotacion.merge({empleados: empleados, fte: fte})
 end
 Dotacion.create(dotaciones2)
 
